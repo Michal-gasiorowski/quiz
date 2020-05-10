@@ -66,7 +66,7 @@ class App extends React.Component{
   }
   
   handleQuestion = (event) => {
-     this.setState({question: event.target.id - 1})
+     this.setState({question: event})
   }
 
   
@@ -99,7 +99,7 @@ class App extends React.Component{
   }
 
   render() {
-	if (true) {return(
+	if (this.state.submited !== true) {return(
   	
     <div className="App">
     

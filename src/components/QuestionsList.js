@@ -9,7 +9,7 @@ export const QuestionsList = (props) => {
          listItems.push(i);
      }
      const buttons = listItems.map(i => 
-      <div key={i} className="question" onClick={props.onClick} id={i+1}>Pytanie {i+1} {props.tempAnswers[i] !== 0 && <b>odp: {props.tempAnswers[i]}</b>}</div>
+      <div key={i} className="question" onClick={() => props.onClick(i)} id={i}>Pytanie {i+1} {props.tempAnswers[i] !== 0 && <b>odp: {props.tempAnswers[i]}</b>}</div>
        ) 
  
  return (<div className="main">
